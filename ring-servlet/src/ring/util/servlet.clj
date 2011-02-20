@@ -37,6 +37,8 @@
    :content-type       (.getContentType request)
    :content-length     (get-content-length request)
    :character-encoding (.getCharacterEncoding request)
+   :locale             (.getLocale request)
+   :locales            (enumeration-seq (.getLocales request))
    :body               (.getInputStream request)})
 
 (defn merge-servlet-keys
